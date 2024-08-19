@@ -1,0 +1,45 @@
+{{ define "base"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{template "title" .}} -Go - Project Structure</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+   
+</head>
+<body>
+    <!-- instantiate nav template -->
+    {{ template "nav" . }}
+    <div class="container">
+        {{ template "content" . }}
+    </div>
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3 bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">Made with ❤️ by <a href="https://github.com/nicholas-karimi">nicholas-karimi</a></span>
+                    &copy;<script>document.write(new Date().getFullYear())</script>
+                </div> 
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="https://github.com/nicholas-karimi/go-project-organization">GitHub</a></li>
+                        <li><a href="https://go.dev/">Go</a></li>
+                        <li><a href="https://github.com/nicholas-karimi/go-project-organization/blob/main/LICENSE">License</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/bootstrap.es.js"></script>
+     <!-- htmx -->
+     <script src="/static/js/htmx.es.js"></script>
+</body>
+</html>
+
+{{ end }}
